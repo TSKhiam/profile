@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>簡單計數器</title>
+   
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #counter {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+    <h1>簡單計數器</h1>
+    <div id="counter">0</div>
+    <button id="incrementBtn">點擊增加</button>
+
+    <button id="alertBtn">點擊顯示提示</button>
+
+    <button id="openBtn">下一頁</button>
+   
+
+    <script>
+        // JavaScript部分
+        var counterDisplay = document.getElementById('counter');
+        var incrementBtn = document.getElementById('incrementBtn');
+        var alertBtn = document.getElementById('alertBtn');
+        var openBtn = document.getElementById('openBtn');
+
+
+        var count = 0;
+
+        incrementBtn.addEventListener('click', () => {
+            count++;
+            counterDisplay.textContent = count;
+        });
+
+
+
+        alertBtn.addEventListener('click', () => {
+            alert('目前的數字為:'+count);
+        });
+
+        openBtn.addEventListener('click', () => {
+            window.open('https://guidephy.github.io/WebDesign.html');
+        });
+    </script>
+
+</body>
+
+</html>
